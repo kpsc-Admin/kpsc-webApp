@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="text-center">
+    <h2 class="jumbotron">Question Details</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <form #questionData="ngForm" (ngSubmit)="onSubmit(questionData)">
+
+        <div class="form-group">
+          <label>Category</label>
+          <select id="categoryList" name="category" ngModel required>
+               <option value = "1">English</option>
+               <option value = "2">Maths</option>
+               <option value = "3">Physcis</option>
+               <option value = "4">LDC</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+          <label>Question</label>
+          <div>
+            <textarea rows="4" cols="50" name="question" ngModel required></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <table class="table table-sm table-hover">
+            <tr>
+              <td>
+                <input type="radio" value="option1" name="options" ngModel checked="checked" required>
+              </td>
+              <td>
+                <input class="form-control" name="option1" ngModel [(ngModel)]="service.option1" placeholder="option1" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" value="option2" name="options" ngModel required>
+              </td>
+              <td>
+                <input class="form-control" name="option2" ngModel [(ngModel)]="service.option2" placeholder="option2" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" value="option3" name="options" ngModel required>
+              </td>
+              <td>
+                <input class="form-control" name="option3" ngModel [(ngModel)]="service.option3" placeholder="option3" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" value="option4" name="options" ngModel required>
+              </td>
+              <td>
+                <input class="form-control" name="option4" ngModel [(ngModel)]="service.option4" placeholder="option4" required>
+              </td>
+            </tr>
+          </table>ng seer
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <div>
+            <textarea rows="4" cols="50" name="description" ngModel></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-default" type="submit" [disabled]="!questionData.valid">
+        <i class="fa fa-floppy-o"></i>
+        Submit
+      </button>
+
+        <button class="btn btn-default" type="button" (click)="resetClick(questionData)">
+        <i class="fa fa-repeat"></i>
+        Reset
+      </button>
+
+      </form>
+    </div>
+
+    <!--<div class="col-md-5">
+      list
+    </div>-->
+  </div>
+</div>

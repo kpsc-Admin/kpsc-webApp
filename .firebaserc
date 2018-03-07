@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "angular-auth-firebase",
+    "psc master": "kpsc-app",
+    "pscmaster": "kpsc-app"
+  }
+}

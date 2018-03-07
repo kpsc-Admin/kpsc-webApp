@@ -1,0 +1,37 @@
+.fileUploadDiv {
+    margin: 8px;
+}
+
+input[type=file], input[type=file] + input {
+    display: inline-block;
+    background-color: #eee;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 4px;
+}
+
+    input[type=file] + input {
+        padding: 13px;
+        background-color: #17964a;
+        color:white;
+    }
+
+::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    background-color: #17964a;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 8px;
+    color:white;
+}
+
+::-ms-browse {
+    background-color: #00b7cd;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 8px;
+}
+
+input[type=file]::-ms-value {
+    border: none;
+}

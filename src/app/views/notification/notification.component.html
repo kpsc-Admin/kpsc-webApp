@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="text-center">
+    <h2 class="jumbotron">Notification</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+        <form #notificationData="ngForm" (ngSubmit)="onSubmit(notificationData)">
+            <div class="form-group">
+                <label>Title</label>
+                <div>
+                  <textarea rows="4" cols="30" name="title" ngModel required  style="width:100%"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Content</label>
+                <div>
+                  <textarea rows="4" cols="50" name="content" ngModel required  style="width:100%"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>URL</label>
+                <div>
+                  <input type="text" name="url" ngModel required style="width:100%">
+                </div>
+            </div>
+            <div class="form-group">
+              <upload-form basePath="NotificationPhotos" (eventEmitter)=event($event)></upload-form>  
+            </div>
+
+            <button class="btn btn-default" type="submit" [disabled]="!notificationData.valid">
+                <i class="fa fa-floppy-o"></i>
+                Upload
+              </button>
+
+        </form>
+    </div>
+  </div>  
+</div>
