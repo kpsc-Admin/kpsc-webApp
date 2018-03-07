@@ -41,4 +41,14 @@ export class ServiceService {
   deleteData($key: string) {
       this.dataList.remove($key);
   }
+
+  insertDataIntoFireBase(data: any, path: string)
+  {
+    
+    let handle = this.firbase.list(path);
+    handle.push(data);
+    
+  }
+
+
 }

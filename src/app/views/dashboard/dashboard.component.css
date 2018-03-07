@@ -1,0 +1,11 @@
+a
+{
+    cursor: pointer;
+}
+li:hover {
+    background-color:#189852;
+}
+li.a:hover
+{
+    color: white
+}
